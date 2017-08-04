@@ -30,7 +30,7 @@ function sum(a,b){ //eslint-disable-line
 }
 
 // Here is the test for sum(); uncomment it to run it
-//testSum(4, 7);
+testSum(4, 7);
 
 
 
@@ -56,13 +56,12 @@ create a new branch for your work on the next question!
 
 // Write your code here
 function multiply(a,b) { 
-    return [ (a * b), "The product of " + a + " and " + b + ' is ' + (a * b) ];
+    return [ (a * b), "The product of " + a + " and " + b + ' is ' + (a * b) + '.' ];
 }
 
-alert("test");
 
 // Here is the test for multiply(); uncomment it to run it
-// testMultiply(5,9);
+ testMultiply(5,9);
 
 
 /////////////////////////////////////
@@ -96,11 +95,29 @@ new branch for your work on the next question!
 
 // Write your code here
 function sumAndMultiply(a,b,c){ //eslint-disable-line
+    // function sum(a,b){ //eslint-disable-line
+    //     var total = a + b;
+    //     return [ total, 'The sum of ' + a + ' and ' + b +' is ' + total + '.' ];
+    //     // returns array first element = sum, second = string like example
+    // }    
 
+    var sumVar = sum(a, b)[0];
+    sumVar += c;
+    var product = multiply(a, b)[0];
+    product *= c;
+
+    return [
+        sumVar,
+        product,
+        a + ' and ' + b + ' and ' + c + ' sum to ' + sumVar + '.',
+        "The product of " + a + " and " + b + ' and ' + c + ' is ' + product + "."
+    ]
 }
+// Third element: "4 and 7 and 5 sum to 16."
+// Fourth element: "The product of 4 and 7 and 5 is 140."
 
 // Here is the test for sumAndMultiply(); uncomment it to run it
-// testSumAndMultiply(4,7,5);
+ testSumAndMultiply(4,7,5);
 
 
 /////////////////////////////////////
