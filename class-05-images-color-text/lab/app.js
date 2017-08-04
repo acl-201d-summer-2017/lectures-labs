@@ -22,15 +22,15 @@
 
 //*/
 
-// Write your code here
-//function sum(a,b){ //eslint-disable-line
-//     var total = a + b;
-//         return [ total, 'The sum of ' + a + ' and ' + b +' is ' + total + '.' ];
+//Write your code here
+function sum (a,b){ //eslint-disable-line
+    var total = a + b;
+        return [ total, 'The sum of ' + a + ' and ' + b +' is ' + total + '.' ];
           //returns array first element = sum, second = string like example
-//}
+}
 
-// // Here is the test for sum(); uncomment it to run it
- ///testSum(4, 7);// 
+// Here is the test for sum(); uncomment it to run it
+ testSum(4, 7);// 
 
 
 
@@ -54,7 +54,7 @@ between GitHub and your laptop. Don't forget to
 create a new branch for your work on the next question!
 */
 
-// // Write your code here
+// Write your code here
 function multiply ( a, b ){ //eslint-disable-line
     var total = a * b;
         return [ total, 'The product of ' + a + ' and ' + b +' is ' + total + '.' ];
@@ -94,13 +94,19 @@ new branch for your work on the next question!
 
 */
 
-// Write your code here
+//Write your code here
 function sumAndMultiply(a,b,c){ //eslint-disable-line
+    var sumAb = sum ( a, b )[0];
+    var sumC = sum ( sumAb , c)[0];
+    var productAb = multiply ( a, b )[0];
+    var productC =  multiply( productAb , c)[0];
+
+return [ sumC, productC , a + ' and ' + b + ' and ' + c +  ' sum to ' + sumC + '.',
+         'The product of ' + a + ' and ' + b + ' and ' + c + ' is ' + productC + '.' ];
 
 }
-
-// Here is the test for sumAndMultiply(); uncomment it to run it
-// testSumAndMultiply(4,7,5);
+ //Here is the test for sumAndMultiply(); uncomment it to run it
+testSumAndMultiply(4,7,5);
 
 
 /////////////////////////////////////
