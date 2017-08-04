@@ -1,0 +1,27 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+}
+
+#example-header {
+    font-family: monospace;
+}
+
+.favorite {
+    color: blue;
+}
+
+body {
+    font-family: sans-serif;
+}
+
+main {
+    width: 80%;
+    margin: 0 auto;
+}
+
+h2 {
+    font-family: serif !important;
+}
