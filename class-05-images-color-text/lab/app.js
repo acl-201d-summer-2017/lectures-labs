@@ -142,7 +142,7 @@ return [ fin, testArray[0] + ',' + testArray[1] + ',' + testArray[2] + ' was pas
 
 }
 // Here is the test for sumArray(); uncomment it to run it
- testSumArray(testArray);
+ //testSumArray(testArray);
 
 
 /////////////////////////////////////
@@ -171,8 +171,13 @@ new branch for your work on the next question!
 
 // Write your code here
 function multiplyArray(testArray){ //eslint-disable-line
+var testM = multiply (testArray[0], testArray[1])
+var finM = multiply (testM[0], testArray[2]) [0]
 
+console.log ('The numbers ' + testArray[0] + ',' + testArray[1] + ',' + testArray[2] + ' have a product of ' + finM + '.')
+
+return [finM, 'The numbers ' + testArray[0] + ',' + testArray[1] + ',' + testArray[2] + ' have a product of ' + finM + '.'];
 }
 
 // Here is the test for multiplyArray(); uncomment it to run it
-// testMultiplyArray(2,3,4);
+ testMultiplyArray(2,3,4);
