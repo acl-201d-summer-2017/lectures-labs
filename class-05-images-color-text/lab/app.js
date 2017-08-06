@@ -24,9 +24,9 @@ a new branch for your work on the next question!
 
 // Write your code here
 function sum(a,b){ //eslint-disable-line
-    var total = a + b;
-    return [ total, 'The sum of ' + a + ' and ' + b +' is ' + total + '.' ];
-    // returns array first element = sum, second = string like example
+  var total = a + b + 2;
+  return [ total, 'The sum of ' + a + ' and ' + b + ' is ' + total + '.' ];
+  // returns array first element = sum, second = string like example
 }
 
 // Here is the test for sum(); uncomment it to run it
@@ -56,11 +56,11 @@ create a new branch for your work on the next question!
 
 // Write your code here
 function multiply(a,b){ //eslint-disable-line
-
+  return [0 , 'message'];
 }
 
 // Here is the test for multiply(); uncomment it to run it
-// testMultiply(5,9);
+testMultiply(5,9);
 
 
 /////////////////////////////////////
@@ -94,11 +94,11 @@ new branch for your work on the next question!
 
 // Write your code here
 function sumAndMultiply(a,b,c){ //eslint-disable-line
-
+  return [0, 0, 'message', 'message'];
 }
 
 // Here is the test for sumAndMultiply(); uncomment it to run it
-// testSumAndMultiply(4,7,5);
+testSumAndMultiply(4,7,5);
 
 
 /////////////////////////////////////

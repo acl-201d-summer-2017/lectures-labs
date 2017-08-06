@@ -1,30 +1,47 @@
 'use strict';
 
-function testSum() { //eslint-disable-line
+function setElementsPass(id, cb) {
+  var p = document.getElementById(id);
+  p.setAttribute('style', 'white-space: pre;');
+  p.textContent = 'TEST FOR sum() PASSES';
+  p.style.color = 'green';
+}
+
+function setElementsFail(id, cb, expected) {
+  var p = document.getElementById(id);
+  p.setAttribute('style', 'white-space: pre;');
+  p.textContent += 'TEST FOR sum() FAILS\r\n';
+  p.textContent += expected + '\r\n';
+  p.innerHTML += 'Got: ' + cb;
+  p.style.color = 'red';
+
+}
+
+function testSum() {
   if (sum(4,7)[1] === 'The sum of 4 and 7 is 11.') {
-    console.log('%c TEST FOR sum() PASSES', 'color: green');
+    setElementsPass('sum');
   } else {
-    console.log('%c TEST FOR sum() FAILS', 'color: red');
+    setElementsFail('sum', sum(4,7), 'Expected: 11, The sum of 4 and 7 is 11.');
   }
 }
 
-function testMultiply() { //eslint-disable-line
+function testMultiply() {
   if (multiply(5,9)[1] === 'The product of 5 and 9 is 45.') {
-    console.log('%c TEST FOR multiply() PASSES', 'color: green');
+    setElementsPass('multiply');
   } else {
-    console.log('%c TEST FOR multiply() FAILS', 'color: red');
+    setElementsFail('multiply', multiply(5, 9), 'Expected:  45,The Product of 5 and 9 is 45.');
   }
 }
 
-function testSumAndMultiply() { //eslint-disable-line
+function testSumAndMultiply() {
   if (sumAndMultiply(4, 7, 5)[2] === '4 and 7 and 5 sum to 16.' && sumAndMultiply(4, 7, 5)[3] === 'The product of 4 and 7 and 5 is 140.') {
-    console.log('%c TEST FOR sumAndMultiply() PASSES', 'color: green');
+    setElementsPass('sumAndMultiply');
   } else {
-    console.log('%c TEST FOR sumAndMultiply() FAILS', 'color: red');
+    setElementsFail('sumAndMultiply', sumAndMultiply(4, 7, 5), 'Expected: 16,140,4 and 7 and 5 sum to 16.,The product of 4 and 7 and 5 is 140.');
   }
 }
 
-function testSumArray() { //eslint-disable-line
+function testSumArray() {
   if (sumArray(testArray)[1] === '2,3,4 was passed in as an array of numbers, and 9 is their sum.') {
     console.log('%c TEST FOR sumArray() PASSES', 'color: green');
   } else {
@@ -32,7 +49,7 @@ function testSumArray() { //eslint-disable-line
   }
 }
 
-function testMultiplyArray() { //eslint-disable-line
+function testMultiplyArray() {
   if (multiplyArray(testArray)[1] === 'The numbers 2,3,4 have a product of 24.') {
     console.log('%c TEST FOR multiplyArray() PASSES', 'color: green');
   } else {
