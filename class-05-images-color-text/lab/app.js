@@ -1,4 +1,4 @@
-'use strict';
+// 'use strict';
 
 ///////////////////////////////////// 
 /* Problem 1 (this is your demo that we'll solve in class)
@@ -20,17 +20,16 @@ Once you get the test passing, do an a-c-p cycle and synchronize the
 code between GitHub and your laptop. Don't forget to create 
 a new branch for your work on the next question!
 
-*/
+// // Write your code here
+// // function sum(a,b){ //eslint-disable-line
+// //     var total = a + b;
+//      return [ total, 'The sum of ' + a + ' and ' + b +' is ' + total + '.' ];
+//  }
+//     // returns array first element = sum, second = string like example
+// }
 
-// Write your code here
-function sum(a,b){ //eslint-disable-line
-    var total = a + b;
-    return [ total, 'The sum of ' + a + ' and ' + b +' is ' + total + '.' ];
-    // returns array first element = sum, second = string like example
-}
-
-// Here is the test for sum(); uncomment it to run it
-testSum(4, 7);
+// // Here is the test for sum(); uncomment it to run it
+// testSum(4, 7);
 
 
 
@@ -56,8 +55,15 @@ create a new branch for your work on the next question!
 
 // Write your code here
 function multiply(a,b){ //eslint-disable-line
+    var product = a * b;
+    return [ product, 'The product of ' + a + ' and ' + b + ' is ' + product + '.' ];
 
-}
+};
+
+function sum(a,b){ //eslint-disable-line
+var total = a + b;
+return [ total, 'The sum of ' + a + ' and ' + b +' is ' + total + '.' ];
+ }
 
 // Here is the test for multiply(); uncomment it to run it
 // testMultiply(5,9);
@@ -89,11 +95,21 @@ function and see if the test passes.
 Once you get the test passing, do an a-c-p cycle and synchronize the 
 code between GitHub and your laptop. Don't forget to create a 
 new branch for your work on the next question!
-
+function sum(a,b){ //eslint-disable-line
+// //     var total = a + b;
+//      return [ total, 'The sum of ' + a + ' and ' + b +' is ' + total + '.' ];
+//  }
 */
 
 // Write your code here
 function sumAndMultiply(a,b,c){ //eslint-disable-line
+var totalAB = sum (a, b) [0]
+var totalABC = sum (totalAB, c) [0]
+var productAB = multiply (a, b) [0]
+var productABC = multiply (productAB, c) [0]
+
+return [totalABC, productABC,  a + ' and ' + b + ' and ' + c + ' sum to ' + totalABC + '.',
+ 'The product of ' + a + ' and ' + b + ' and ' + c + ' is ' + productABC + '.'];
 
 }
 
@@ -128,6 +144,11 @@ new branch for your work on the next question!
 var testArray = [2,3,4]; //eslint-disable-line
 
 function sumArray(testArray){ //eslint-disable-line
+var test = sum (testArray[0], testArray[1])
+var fin = sum (test[0], testArray[2]) [0] 
+
+return [ fin, testArray[0]  + ',' + testArray[1] + ',' +  testArray[2]
+ + ' was passed in as an array of numbers, and ' + fin + ' is their sum.'];
 
 }
 
@@ -161,8 +182,13 @@ new branch for your work on the next question!
 
 // Write your code here
 function multiplyArray(testArray){ //eslint-disable-line
-
+var testM = multiply (testArray[0], testArray[1])
+var finM = multiply (testM[0], testArray[2]) [0] 
+console.log ('The numbers ' + testArray[0]  + ',' + testArray[1] + ',' +  testArray[2]
+ + ' have a product of ' + finM + '.')
+return [finM, 'The numbers ' + testArray[0]  + ',' + testArray[1] + ',' +  testArray[2]
+ + ' have a product of ' + finM + '.'];
 }
 
 // Here is the test for multiplyArray(); uncomment it to run it
-// testMultiplyArray(2,3,4);
+testMultiplyArray(2,3,4);
