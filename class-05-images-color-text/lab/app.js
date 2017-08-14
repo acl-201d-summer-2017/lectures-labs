@@ -56,12 +56,13 @@ create a new branch for your work on the next question!
 
 // Write your code here
 function multiply(a,b){ //eslint-disable-line
-
+var total = a * b;
+return [ total, 'The product of ' + a + ' and ' + b  +  ' is ' + total + '.' ];
 }
-
 // Here is the test for multiply(); uncomment it to run it
-// testMultiply(5,9);
+ testMultiply(5,9);
 
+ 
 
 /////////////////////////////////////
 /* Problem 3
@@ -93,12 +94,22 @@ new branch for your work on the next question!
 */
 
 // Write your code here
-function sumAndMultiply(a,b,c){ //eslint-disable-line
+function sumAndMultiply(a,b,c) { //eslint-disable-lineS
+//sum(4,7,5);
+//multiply(4,7,5);
+var total =sum(sum(a,b)[0],c)[0];
+var product =multiply(multiply(a,b)[0],c)[0];
 
+
+return [total, product, a +' and ' + b +' and ' + c +' sum to ' +  total + '.',
+ 'The product of ' + a + ' and '+ b +' and ' + c + ' is ' + product + '.'];
+//return [total, sum (4,7,5)];
+//console.log( )
+//return [total, multiply (4,7,5)];
 }
 
 // Here is the test for sumAndMultiply(); uncomment it to run it
-// testSumAndMultiply(4,7,5);
+testSumAndMultiply(4,7,5);
 
 
 /////////////////////////////////////
