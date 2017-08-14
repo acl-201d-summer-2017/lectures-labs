@@ -30,7 +30,7 @@ function sum(a,b){ //eslint-disable-line
 }
 
 // Here is the test for sum(); uncomment it to run it
-testSum(4, 7);
+//testSum(4, 7);
 
 
 
@@ -56,11 +56,15 @@ create a new branch for your work on the next question!
 
 // Write your code here
 function multiply(a,b){ //eslint-disable-line
+    var total = a*b;
+    return [total, 'The product of ' + a + ' and ' + b + ' is ' + total + '.'];
+
 
 }
 
+
 // Here is the test for multiply(); uncomment it to run it
-// testMultiply(5,9);
+//testMultiply(5,9)
 
 
 /////////////////////////////////////
@@ -94,11 +98,25 @@ new branch for your work on the next question!
 
 // Write your code here
 function sumAndMultiply(a,b,c){ //eslint-disable-line
+    sum(a,b);{ //eslint-disable-line
+        var totalSum = a + b; //sum to add with c
+    }
+    
+    sum(totalSum,c);{ //eslint-disable-line
+        var finalSum = totalSum + c;
+        //return [finalSum, + a + ' and ' + b + ' and ' + c + ' sum to ' + finalSum + '.'];//total of a+b+c
+    }
 
+    multiply(a,b);{ //eslint-disable-line
+        var totalMul = a*b;}
+    multiply(totalMul,c);{ //eslint-disable-line
+        var finalMul = totalMul*c;
+    }
+    
+    return [finalSum, finalMul, + a + ' and ' + b + ' and ' + c + ' sum to ' + finalSum + '.', 'The product of ' + a + ' and ' + b + ' and ' + c + ' is ' + finalMul + '.'];//final expression
 }
-
 // Here is the test for sumAndMultiply(); uncomment it to run it
-// testSumAndMultiply(4,7,5);
+//testSumAndMultiply(4,7,5);
 
 
 /////////////////////////////////////
@@ -125,14 +143,25 @@ new branch for your work on the next question!
 */
 
 // Write your code here
-var testArray = [2,3,4]; //eslint-disable-line
+    var testArray = [2,3,4]; //eslint-disable-line
+    var x = testArray[0];
+    var y = testArray[1];
+    var z = testArray[2];
 
 function sumArray(testArray){ //eslint-disable-line
 
+    sum(x,y);{ //eslint-disable-line
+        var totalArr = x + y; 
+    }
+    
+    sum(totalArr,z);{ //eslint-disable-line
+        var finalArr = totalArr + z;
+    }
+    return[finalArr, + x + ',' + y + ',' + z + ' was passed in as an array of numbers, and ' + finalArr + ' is their sum.'];
 }
 
 // Here is the test for sumArray(); uncomment it to run it
-// testSumArray(testArray);
+testSumArray(testArray);
 
 
 /////////////////////////////////////
