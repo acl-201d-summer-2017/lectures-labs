@@ -55,12 +55,13 @@ create a new branch for your work on the next question!
 */
 
 // Write your code here
-function multiply(a,b){ //eslint-disable-line
-
+function multiply(a,b) { 
+    return [ (a * b), "The product of " + a + " and " + b + ' is ' + (a * b) + '.' ];
 }
 
+
 // Here is the test for multiply(); uncomment it to run it
-// testMultiply(5,9);
+ testMultiply(5,9);
 
 
 /////////////////////////////////////
@@ -93,12 +94,25 @@ new branch for your work on the next question!
 */
 
 // Write your code here
-function sumAndMultiply(a,b,c){ //eslint-disable-line
+function sumAndMultiply(a,b,c){
 
+    var sumVar = sum(a, b)[0];
+    sumVar = sum(sumVar, c)[0];
+    var product = multiply(a, b)[0];
+    product = multiply(product, c)[0];
+
+    return [
+        sumVar,
+        product,
+        a + ' and ' + b + ' and ' + c + ' sum to ' + sumVar + '.',
+        "The product of " + a + " and " + b + ' and ' + c + ' is ' + product + "."
+    ]
 }
+// Third element: "4 and 7 and 5 sum to 16."
+// Fourth element: "The product of 4 and 7 and 5 is 140."
 
 // Here is the test for sumAndMultiply(); uncomment it to run it
-// testSumAndMultiply(4,7,5);
+ testSumAndMultiply(4,7,5);
 
 
 /////////////////////////////////////
@@ -129,10 +143,25 @@ var testArray = [2,3,4]; //eslint-disable-line
 
 function sumArray(testArray){ //eslint-disable-line
 
+    var sumVar = 0;
+    var numString = '';
+
+    for(var i = 0; i < testArray.length; i++) {
+        sumVar = sum(sumVar, testArray[i])[0];
+        numString = numString + testArray[i];
+        if(i < testArray.length - 1){
+            numString = numString + ",";
+        } 
+    }
+
+    return [
+        sumVar,
+        numString + " was passed in as an array of numbers, and " + sumVar + " is their sum."
+    ];
 }
 
 // Here is the test for sumArray(); uncomment it to run it
-// testSumArray(testArray);
+ testSumArray(testArray);
 
 
 /////////////////////////////////////
