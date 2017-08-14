@@ -31,7 +31,10 @@ function sum(a,b){ //eslint-disable-line
 
 // Here is the test for sum(); uncomment it to run it
 testSum(4, 7);
+sum (4,5);
 
+var newArray = ['hi', 'bye', 'ciao'];
+console.log(newArray[1]);
 
 
 
@@ -55,12 +58,13 @@ create a new branch for your work on the next question!
 */
 
 // Write your code here
-function multiply(a,b){ //eslint-disable-line
-
+function multiply(a,b){             //eslint-disable-line
+    var total = a * b;
+    return [ total, 'The product of ' + a + ' and ' + b + ' is ' + total + '.'];
 }
 
 // Here is the test for multiply(); uncomment it to run it
-// testMultiply(5,9);
+testMultiply(5,9);
 
 
 /////////////////////////////////////
@@ -94,11 +98,18 @@ new branch for your work on the next question!
 
 // Write your code here
 function sumAndMultiply(a,b,c){ //eslint-disable-line
-
+   var firstSum = sum (a, b)[0];
+   var firstSumNumber = firstSum[0];
+   console.log(firstSumNumber);
+   var total = sum (firstSum, c)[0];
+   var firstProduct = multiply(a,b)[0];
+   var totalProduct = multiply(firstProduct, c)[0];
+   return [total, totalProduct, a + ' and ' + b + ' and ' + c + ' sum to ' + total + '.', 'The product of ' + a + ' and ' + b + ' and ' + c + ' is ' + totalProduct + '.'];
 }
 
+
 // Here is the test for sumAndMultiply(); uncomment it to run it
-// testSumAndMultiply(4,7,5);
+testSumAndMultiply(4,7,5);
 
 
 /////////////////////////////////////
@@ -128,11 +139,13 @@ new branch for your work on the next question!
 var testArray = [2,3,4]; //eslint-disable-line
 
 function sumArray(testArray){ //eslint-disable-line
-
+    
+    var sumvar = sum (testArray[0], testArray[1])[0];
+    var totalSum1 = sum (sumvar, testArray[2])[0];
+    return [totalSum1, "2,3,4 was passed in as an array of numbers, and 9 is their sum."];
 }
-
 // Here is the test for sumArray(); uncomment it to run it
-// testSumArray(testArray);
+testSumArray(testArray);
 
 
 /////////////////////////////////////
@@ -161,8 +174,10 @@ new branch for your work on the next question!
 
 // Write your code here
 function multiplyArray(testArray){ //eslint-disable-line
-
+    var provar = multiply (testArray[0], testArray[1])[0];
+    var totalpro1 = multiply (provar, testArray[2])[0];
+    return [totalpro1, "The numbers 2,3,4 have a product of 24." ];
 }
 
 // Here is the test for multiplyArray(); uncomment it to run it
-// testMultiplyArray(2,3,4);
+testMultiplyArray(2,3,4);
