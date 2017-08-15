@@ -47,11 +47,13 @@
         * use `height` and `width` attributes
     * using JS to draw
 * Chart.js
+    * resource for finding JS libraries: [javascripting.com](https://www.javascripting.com/)
     * adding the library to your code
     * creating a Chart
         * call the constructor `new Chart`
         * pass in data formatted in a specific way
-
+* Code Review
+    * [Michael's PR](https://github.com/mewarren/bus-mall/pull/1)
 <hr></hr>
 
 ## Readings
