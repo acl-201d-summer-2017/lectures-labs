@@ -1,72 +1,85 @@
-'use strict'
+'use strict';
+
+// TODO draw with canvas example
+var canvas = document.getElementById( 'squares' );
+var context = canvas.getContext( '2d' );
+
+context.fillStyle = 'green';
+context.fillRect(0,200,50,300);
+
+context.fillStyle = 'blue';
+context.fillRect(100,400,50,100);
+
+context.fillStyle = 'yellow';
+context.fillRect(200,450,50,50);
+
+// setInterval( drawLines, 50 );
+
+// function drawLines () {
+//     context.fillStyle = 'green';
+//     context.fillRect(0,0,500,500);
+//     for ( var i = 0; i < 5; i ++ ) { 
+//         context.beginPath();
+//         context.moveTo( 250, 250 );
+//         context.lineTo( randomZ(0, 500), randomZ(0, 500) );
+//         context.strokeStyle = 'blue';
+//         context.lineWidth = 7;
+//         context.stroke();
+//     }
+// }
+
+// function randomZ ( min, max ) {
+//     return Math.floor(Math.random() * (max - min + 1)) + min;
+// }
 
 // // Chartjs example
-var canvas = document.getElementById( 'flights' );
+var chartCanvas = document.getElementById( 'flights' );
+
+var americanData = {
+    label: 'american airlines',
+    data: [100, 50, 600, 800], // number of votes
+    backgroundColor: 'rgba(255,0,0,.5)',
+    lineTension: 0
+};
+
+var alaskaData = {
+    label: 'alaska airlines',
+    data: [70,120,40,300],
+    backgroundColor: 'rgba(0,0,255,.5)',
+    lineTension: 0
+};
 
 // creating a new Chart w/o dissecting the data into variables
-var flightPrices = new Chart ( canvas, {
+var flightChart = new Chart ( chartCanvas,  {
     type: 'bar',
     data: {
-        labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun'],
-        datasets: [
-            {
-                label: 'spirit airlines',
-                data: [500,100,400,100,554,333],
-                backgroundColor: 'rgba(200,200,100,.5)',
-                lineTension: .5
-            },
-            {
-                label: 'american airlines',
-                data: [800,200,200,400,254,103],
-                backgroundColor: 'rgba(200,100,200,.5)',
-                lineTension: 0
-            }
-        ]
+        labels: ['jan','feb','mar','apr'], // bag, banana, dog duck
+        datasets: [americanData, alaskaData]
     },
     options: {
         title: {
             display: true,
-            text: 'Flight Prices'
+            text: 'Outrageous Flight Prices'
         },
-        scales: {
-            yAxes: [{
-                ticks: {
-                    beginAtZero: true
-                }
-            }]
+        legend: {
+            display: false
         }
     }
 });
 
+/*
+    config object in context of bus-mall
 
-
-
-
-
-// TODO draw with canvas example
-
-var canvas = document.getElementById( 'squares' );
-var context = canvas.getContext( '2d' );
-
-
-context.fillStyle = "green";
-context.fillRect( 500, 0, 20, 500 );
-
-context.fillStyle = "green";
-context.fillRect( 450, 460, 20, 40 );
-
-context.fillStyle = "green";
-context.fillRect( 400, 400, 20, 100 );
-
-
-// for (var i = 0; i < 20; i ++) {
-//     context.beginPath();
-//     context.strokeStyle = "white";
-//     context.moveTo( randomZ(100,400), randomZ(100,300) );
-//     context.lineTo( randomZ(0,500), randomZ(0,400) );
-//     context.stroke();
-// }
-
-function randomZ ( min, max ) {
-    return Math.floor(Math.random() * (max - min + 1)) + min;
-}
+    {
+        type: 'bar',
+        data: {
+            labels: ['bag','banana','boombox','bouncy house','scissors'], // item names
+            datasets: [
+                {
+                    label: 'Voter 1', // label for votes
+                    data: [0,4,2,0,1] // number of votes corresponding to items in labels
+                }
+            ]
+        }
+    }
+*/
