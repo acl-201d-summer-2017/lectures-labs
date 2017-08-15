@@ -3,41 +3,9 @@
 // // Chartjs example
 var canvas = document.getElementById( 'flights' );
 
-// // creating a new Chart using data in variables
-var labels = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun'];
-var spiritAir = {
-    label: 'spirit airlines',
-    data: [500,100,400,100,554,333],
-    backgroundColor: 'rgba(200,200,100,.5)',
-    lineTension: 1.2
-};
-
-var americanAir = {
-    label: 'american airlines',
-    data: [800,200,200,400,254,103],
-    backgroundColor: 'rgba(200,100,200,.5)',
-    lineTension: 0
-};
-
-var datasets = [ spiritAir, americanAir ];
-
-var flightPrices = new Chart ( canvas, {
-    type: 'line',
-    data: {
-        labels: labels,
-        datasets: datasets
-    },
-    options: {
-        title: {
-            display: true,
-            text: 'Flight Prices'
-        }
-    }
-});
-
 // creating a new Chart w/o dissecting the data into variables
 var flightPrices = new Chart ( canvas, {
-    type: 'line',
+    type: 'bar',
     data: {
         labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun'],
         datasets: [
@@ -45,7 +13,7 @@ var flightPrices = new Chart ( canvas, {
                 label: 'spirit airlines',
                 data: [500,100,400,100,554,333],
                 backgroundColor: 'rgba(200,200,100,.5)',
-                lineTension: 1.2
+                lineTension: .5
             },
             {
                 label: 'american airlines',
@@ -59,6 +27,13 @@ var flightPrices = new Chart ( canvas, {
         title: {
             display: true,
             text: 'Flight Prices'
+        },
+        scales: {
+            yAxes: [{
+                ticks: {
+                    beginAtZero: true
+                }
+            }]
         }
     }
 });
