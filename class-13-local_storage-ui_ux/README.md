@@ -68,7 +68,9 @@
         * **IS LOCAL!**
         * how to save to localStorage
         * how to get from localStorage
-
+* code review
+    * use variables to provide context and make code easier to read!
+    * [Shane's PR](https://github.com/ShaneMoyo/bus-mall/pull/3)
 <hr></hr>
 
 ## Readings
