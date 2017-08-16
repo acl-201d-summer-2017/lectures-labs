@@ -13,7 +13,7 @@
 1. Code review
 
 ### Announcements
-* Quiz 7 due <s>tonight</s> tomorrow night and Quiz 8 due tomorrow night!
+* Quiz 7 due tonight night and Quiz 8 due tomorrow night!
 
 ## Learning Objectives
 - Store, retrieve, and access data stored in using the browser's local storage.
