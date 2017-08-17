@@ -1,0 +1,99 @@
+body {
+    margin: 0;
+    padding: 50px 20%;
+}
+
+header {
+    border: solid black 25px;
+    text-align: center;
+    box-sizing: border-box;
+    height: 300px;
+
+    top: -300px;
+    transform: skew(20deg);
+    position: relative;
+
+    transition: transform 4s ease 2s, top 2s ease;
+
+    /*transition-property: top;
+    transition-duration: 2s;
+    transition-timing-function: ease;
+    transition-delay: 3s;*/
+}
+
+header:hover {
+    transform: skew(-20deg);
+    top: 0;
+    
+}
+
+header ul { 
+    list-style: none;
+}
+
+header:hover h1 {
+    font-size: 4em;
+    color: purple;
+    transition: all 5s ease;
+}
+
+article p:hover{
+    transform: scaleY(2) skewY(20deg) rotate(-15deg);
+    transition: transform 10s linear;
+}
+
+
+
+/* open footer when mouseover aside */
+article footer {
+    /*display: none;*/
+    opacity: 0;
+    height: 0;
+    transition: all 3s ease;
+}
+
+article footer.show {
+    opacity: 1;
+    height: 200px;
+    /*display: block;*/
+}
+
+
+
+/* blink */
+h2 {
+    animation: blink .5s ease 0s infinite alternate;
+    /* 
+        animation-name
+        animation-duration
+                 -timing-function
+                 -delay
+                 -iteration-count
+                 -direction
+                 -fill-mode
+                 -play-state
+    */
+}
+
+@keyframes blink {
+    0% {
+        opacity: 1;
+        color: black;
+        font-size: 1em;
+        transform: rotate(0deg);
+    }
+    50% {
+        color: purple;
+        font-size: 1.3em;
+        transform: rotate(20deg);
+    }
+    75% {
+        transform: rotate(-30deg);
+    }
+    100% {
+        opacity: .2;
+        color: green;
+        font-size: 1em;
+        transform: rotate(0deg);
+    }
+}

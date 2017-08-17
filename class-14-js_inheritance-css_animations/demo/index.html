@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Inheritence</title>
+    <style>
+        body {
+            font-size: 2rem;
+            font-family: sans-serif;
+        }
+    </style>
+
+  </head>
+  <body>
+    <h1>JS Prototype Inheritance</h1>
+    <ol>
+        <li>Every object in JS has a prototype - the Object object</li>
+        <li><b>prototype</b>: "a first, typical or preliminary model of something, especially a machine, from which other forms are developed or copied."</li>
+        <li>A copy of the object's prototype is accessible through the `__proto__` property</li>
+        <li>The prototype chain: JS objects will look for properties on themselves first, then their prototypes</li>
+    </ol>
+    <script>
+
+        // Human constructor
+        function Human ( name, favColor ) {
+            this.name = name;
+            this.favColor = favColor;
+            this.shout = function () {
+                alert( 'I AM ' + this.name.toUpperCase() + ' !!!!!!!!!!!!!!!!!!!!!!!!!!');
+            }
+        }
+
+    </script>
+  </body>
+</html>
