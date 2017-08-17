@@ -1,5 +1,5 @@
 ## **Working with Libraries**
-# Class 14: CSS Animations
+# Class 14: CSS Animations and JS Prototype Inheritance
 
 [Schedule](#schedule) | [Announcements](#announcements) | [Objectives](#learning-objectives) | [Notes](#notes) | [Readings](#readings)
 
@@ -7,9 +7,9 @@
 
 ### Schedule
 1. Announcements 
-1. Code review
-1. CSS Animations
 1. JS Inheritence
+1. CSS Animations
+1. Code review
 
 ### Announcements
 * Quiz 8 due tonight!
