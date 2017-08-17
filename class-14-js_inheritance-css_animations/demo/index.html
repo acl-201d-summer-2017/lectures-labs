@@ -24,9 +24,13 @@
         function Human ( name, favColor ) {
             this.name = name;
             this.favColor = favColor;
-            this.shout = function () {
-                alert( 'I AM ' + this.name.toUpperCase() + ' !!!!!!!!!!!!!!!!!!!!!!!!!!');
-            }
+            // this.shout = function () {
+            //     alert( 'I AM ' + this.name.toUpperCase() + ' !!!!!!!!!!!!!!!!!!!!!!!!!!');
+            // }
+        }
+
+        Human.prototype.shout = function () {
+            alert( 'I AM HUMAN!!!!!!!!!!!!!!!!!');
         }
 
     </script>
