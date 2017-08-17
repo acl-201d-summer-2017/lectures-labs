@@ -9,91 +9,90 @@ header {
     box-sizing: border-box;
     height: 300px;
 
-    top: -300px;
-    transform: skew(20deg);
-    position: relative;
-
-    transition: transform 4s ease 2s, top 2s ease;
-
-    /*transition-property: top;
-    transition-duration: 2s;
-    transition-timing-function: ease;
-    transition-delay: 3s;*/
+    box-shadow: 20px -13px 20px 6px grey;
+    transition: box-shadow 1.5s ease-in; 
+    /* w/o transition will
+    
+    */
 }
 
 header:hover {
-    transform: skew(-20deg);
-    top: 0;
-    
+    box-shadow: -20px 20px 20px 6px blue;
+}
+
+header h1 {
+    animation-name: flash;
+    animation-duration: 1s;
+    animation-timing-function: ease;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-fill-mode: forwards; 
+}
+
+@keyframes flash {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
 }
 
 header ul { 
     list-style: none;
+    font-size: 1.5rem;
 }
 
-header:hover h1 {
-    font-size: 4em;
-    color: purple;
-    transition: all 5s ease;
+li {
+    transition-property: color;
+    transition-duration: 2s;
+    transition-timing-function: ease;
 }
 
-article p:hover{
-    transform: scaleY(2) skewY(20deg) rotate(-15deg);
-    transition: transform 10s linear;
+ul li:hover {
+    color: red;
+    /* transition:  */
+    /* transition-property: color;
+    transition-duration: 5;
+    transition-timing-function: ease; */
+}
+
+p {
+    transform: rotate(180deg);
+    transition: transform 2s ease-in-out;
+}
+
+p:hover {
+    transform: rotate(0deg);
 }
 
 
+body > footer {
+    animation: flashAndGrow 1s 4;
+}
 
-/* open footer when mouseover aside */
-article footer {
-    /*display: none;*/
-    opacity: 0;
-    height: 0;
-    transition: all 3s ease;
+@keyframes flashAndGrow {
+    0% {
+        opacity: 1;
+        font-size: 20px; 
+    }
+    10% {
+        opacity: 0;
+    }
+    20% {
+        opacity: 1;
+    }
+    30% {
+        font-size: 10px;
+    }
+    100% {
+        opacity: 0;
+        font-size: 100px;
+    }
 }
 
 article footer.show {
     opacity: 1;
     height: 200px;
     /*display: block;*/
-}
-
-
-
-/* blink */
-h2 {
-    animation: blink .5s ease 0s infinite alternate;
-    /* 
-        animation-name
-        animation-duration
-                 -timing-function
-                 -delay
-                 -iteration-count
-                 -direction
-                 -fill-mode
-                 -play-state
-    */
-}
-
-@keyframes blink {
-    0% {
-        opacity: 1;
-        color: black;
-        font-size: 1em;
-        transform: rotate(0deg);
-    }
-    50% {
-        color: purple;
-        font-size: 1.3em;
-        transform: rotate(20deg);
-    }
-    75% {
-        transform: rotate(-30deg);
-    }
-    100% {
-        opacity: .2;
-        color: green;
-        font-size: 1em;
-        transform: rotate(0deg);
-    }
 }

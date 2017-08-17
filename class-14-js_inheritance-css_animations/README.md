@@ -13,7 +13,24 @@
 
 ### Announcements
 * Quiz 8 due tonight!
-* Will post teams in Ryver after lunch (:
+* TEAMS
+    - 🍿
+        - michael
+        - devanshu
+        - zach
+        - robin
+
+    - 🐩
+        - christina
+        - shane
+        - jennifer
+        - nick
+
+    - 🐔
+        - morgan
+        - david
+        - eli
+        - frank    
 * Basic final project requirements:
     * 3 pages
     * 2 pages accept and do something with user input
@@ -40,6 +57,7 @@
     * The prototype chain: JS objects will look for properties on themselves first, then their prototypes
         * `Array.hasPropertyOf` comes from `Object.hasPropertyOf`
 * CSS Animations
+    * [CodePens you can learn from!](https://webdesign.tutsplus.com/articles/10-examples-of-animation-on-codepen-you-can-learn-from--cms-28244)
     * [MDN animatable properties](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_animated_properties)
     * Transitions ~ when an element changes state: on hover
         * use `transition` css property on the element you want to animate
