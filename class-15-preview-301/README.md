@@ -17,8 +17,10 @@
     * 26 questions
     * some questions from quizzes, some not!
     * **OPEN-INTERNET** USE ALL SKILLS && RESOURCES (other than people)
+        * run code in your browser's console
+        * google about that css property
     * will ask for a link to something you've created - use a project from class
-    * sections on: git, css, js objects, js functions
+    * sections on: git, css, js objects, js functions, + a couple more!
 * Questions?
 
 ## Learning Objectives
