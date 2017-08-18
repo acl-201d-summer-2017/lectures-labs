@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>REview</title>
+  </head>
+  <body>
+    <script>
+
+        // sayInPigLatin( 'word' ); // works
+        // sayInEnglish( 'ordway' ); // throws err
+
+
+        // fun declarations
+        function sayInPigLatin ( word ) {
+            console.log( 'speaking in PIG' );
+            // word -> ordway
+            var pigLatinWord = word.substring(1) + word.charAt(0) + 'ay';
+            return pigLatinWord;
+        }
+
+
+        // sayInPigLatin( 'word' ); // works
+        // sayInEnglish( 'ordway' ); // throws err
+
+
+        // fun expressions
+        var sayInEnglish = function ( pigLatinWord ) {
+            console.log( 'speaking in ENG' );
+            // ordway -> word
+            var l = pigLatinWord.length;
+            var englishWord = pigLatinWord.charAt(l - 3) + pigLatinWord.substring(0, l - 3);
+            return englishWord;
+        };
+
+
+        sayInPigLatin( 'word' ); // works
+        sayInEnglish( 'ordway' ); // works
+    </script>
+
+  </body>
+</html>

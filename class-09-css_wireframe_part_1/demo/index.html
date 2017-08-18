@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Questions</title>
+        <style>
+            nav li {
+                display: inline-block;
+                font-size: .7rem;
+                cursor: pointer;
+                padding: 10px;
+            }
+
+            nav li:before {
+                content: ' || '
+            }
+
+            nav li:hover {
+                background-color: lightblue;
+            }
+
+            section, form {
+                margin: 0 auto;
+                width: 50%;
+                min-width: 500px;
+            }
+
+            input {
+                display: block;
+            }
+        </style>
+    </head>
+    <body>
+        <nav>
+            <ul id="menu" onclick="//alert('hello!');">
+                <li>Questions</li>
+                <li>New Question</li>
+                <li>Answers</li>
+                <li>Old Questions</li>
+                <li>Exisistential Questions</li>
+            </ul>
+        </nav>
+
+        <section>
+            <ol id="questions"></ol>
+            <sup>* indicates a required question</sup>
+        </section>
+
+        <hr>
+        <!-- TODO build a form to add a new question  -->
+        <form id="new-question" action="demo.html">
+            <fieldset>
+                <legend>New Question</legend>
+
+                <label for="question">Question Text</label>
+                <input type="text" name="question" id="question" placeholder="What color is ___?">
+
+                <label for="answer">Answer Text</label>
+                <input type="text" id="answer" placeholder="Your favorite color.">
+
+                <label for="required">Required</label>
+                <input type="radio" value="required" name="required" id="required">
+
+                <label for="not-required">Not Required</label>
+                <input type="radio" value="not-required" name="required" id="not-required">
+
+                <button type="submit">Ask away</button>
+            </fieldset>
+            <fieldset>
+                <legend>Your Contact</legend>
+                <select>
+                    <option>option one</option>
+                    <option>option two</option>
+                </select>
+                <textarea></textarea>
+            </fieldset>
+        </form>
+        
+        <script src="app.js"></script>
+    </body>
+</html>

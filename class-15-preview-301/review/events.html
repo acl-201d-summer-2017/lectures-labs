@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>REview</title>
+    <style>
+        * { padding: 50px; }
+
+        section {
+            height: 40px;
+            overflow-y: scroll;
+        }
+    </style>
+  </head>
+  <body>
+    <section>
+        <a href="google.com">GOOGLE SOMETHING</a>
+        <button id ="monkey">CLICK ME</button>
+    </section>
+
+    <script>
+
+        // submit v click
+
+        var bod = document.body;
+        bod.addEventListener( 'click', clickHandler );        
+
+        var btn = document.getElementById( 'monkey' );
+        btn.addEventListener( 'click', clickHandler );
+
+        function clickHandler ( event ) {
+            // event object gives you info about the event that happened
+            event.preventDefault();
+            console.log( event.target );
+        }
+
+        var sect = document.querySelector( 'section' );
+        sect.addEventListener( 'scroll', endlessHorse );
+
+        bod.addEventListener( 'scroll', endlessHorse );
+
+        var html = document.querySelector( 'html' );
+        html.addEventListener( 'scroll', endlessHorse );
+
+        function endlessHorse ( event ) {
+            console.log( event );
+        }
+
+
+
+        var atag = document.querySelector( 'a' ); // already in DOM
+        atag.innerText = 'Hello';
+
+        var btag = document.createElement( 'a' ); // created in JS  // <a></a>
+        btag.innerText = 'goodbye'; // <a>goodbye</a>
+        btag.href = 'www.yahoo.com'; // <a href="www.yahoo.com">goodbye</a>
+        // btag.setAttribute('href','www.yahoo.com'); // <a href="www.yahoo.com">goodbye</a>
+        btag.setAttribute('class','link'); // <a class="link" href="www.yahoo.com">goodbye</a>
+
+        var newButton = document.createElement( 'button' );
+
+        var section = document.querySelector( 'section' );
+        section.appendChild( btag );
+        section.appendChild( newButton );
+
+
+    </script>
+  </body>
+</html>

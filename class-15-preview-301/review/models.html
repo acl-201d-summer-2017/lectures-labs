@@ -1,0 +1,78 @@
+<!--
+TODO LIST!!!
+
+- list model
+    - name
+    - show all todos
+    - show complete todos
+    - add new todo
+    - deleting todo
+    - reminder alerts
+    
+- todo model
+    - text
+    - isComplete
+
+-->
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>REview</title>
+  </head>
+  <body>
+      <script>
+
+        // console.log( 'this in our global ===', this );
+
+        // takes info you give, creates and returns new object with that info 
+        // PLUS makes copy of its .prototype property and gives it to new object
+        // MUST be called with keyword: new
+        function Todo ( text ) {
+            this.text = text;
+            this.isComplete = false;
+        } 
+
+        // takes info you give, creates and returns new object with that info
+        function makeTodo ( text ) {
+            return { text: text, isComplete: false };
+        }
+
+        // functions have special property: .prototype ----> Todo.prototype
+        Todo.prototype.render = function () {
+            // will render to DOM
+            console.log( 'eventually I will be in the DOM' );
+        };
+
+        var todo1 = new Todo( 'clean the kitchen' );
+        var todo2 = new Todo( 'adopt a puppy' ); // { text: 'adopt a puppy', isComplete: false }
+
+        todo2.monkey = 'bananan'; // { text: 'adopt a puppy', isComplete: false, monkey: 'bananan' }
+        todo2.render = function () { console.log( 'this  ===', this ); alert( 'I AM ALERT!' ); }; 
+            /* { text: 'adopt a puppy',
+                 isComplete: false, 
+                 monkey: 'bananan', 
+                 render: function () {
+                    console.log( 'this ===', this ); // this === todo2
+                    alert( 'I AM ALERT! );   
+                 };
+             */
+
+        // todo1.render();
+        // todo2.render();
+
+        // objects have special property: .__proto__ ----> cat.__proto__
+        var cat = {
+            sound: 'meow',
+            stripes: false,
+            mittens: true,
+            cry: function () {
+                // console.log( 'meow' );
+                // var thisObjectThatImIn = this;
+                console.log( this.sound ); // this === cat therefore this.sound === 'meow'
+            }
+        };
+
+    </script>
+
+  </body>
+</html>

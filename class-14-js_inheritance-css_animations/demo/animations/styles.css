@@ -1,0 +1,98 @@
+body {
+    margin: 0;
+    padding: 50px 20%;
+}
+
+header {
+    border: solid black 25px;
+    text-align: center;
+    box-sizing: border-box;
+    height: 300px;
+
+    box-shadow: 20px -13px 20px 6px grey;
+    transition: box-shadow 1.5s ease-in; 
+    /* w/o transition will
+    
+    */
+}
+
+header:hover {
+    box-shadow: -20px 20px 20px 6px blue;
+}
+
+header h1 {
+    animation-name: flash;
+    animation-duration: 1s;
+    animation-timing-function: ease;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-fill-mode: forwards; 
+}
+
+@keyframes flash {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
+
+header ul { 
+    list-style: none;
+    font-size: 1.5rem;
+}
+
+li {
+    transition-property: color;
+    transition-duration: 2s;
+    transition-timing-function: ease;
+}
+
+ul li:hover {
+    color: red;
+    /* transition:  */
+    /* transition-property: color;
+    transition-duration: 5;
+    transition-timing-function: ease; */
+}
+
+p {
+    transform: rotate(180deg);
+    transition: transform 2s ease-in-out;
+}
+
+p:hover {
+    transform: rotate(0deg);
+}
+
+
+body > footer {
+    animation: flashAndGrow 1s 4;
+}
+
+@keyframes flashAndGrow {
+    0% {
+        opacity: 1;
+        font-size: 20px; 
+    }
+    10% {
+        opacity: 0;
+    }
+    20% {
+        opacity: 1;
+    }
+    30% {
+        font-size: 10px;
+    }
+    100% {
+        opacity: 0;
+        font-size: 100px;
+    }
+}
+
+article footer.show {
+    opacity: 1;
+    height: 200px;
+    /*display: block;*/
+}
