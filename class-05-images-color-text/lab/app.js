@@ -56,11 +56,11 @@ create a new branch for your work on the next question!
 
 // Write your code here
 function multiply(a,b){ //eslint-disable-line
-  return [0 , 'message'];
+
 }
 
 // Here is the test for multiply(); uncomment it to run it
-testMultiply(5,9);
+// testMultiply(5,9);
 
 
 /////////////////////////////////////
@@ -94,11 +94,11 @@ new branch for your work on the next question!
 
 // Write your code here
 function sumAndMultiply(a,b,c){ //eslint-disable-line
-  return [0, 0, 'message', 'message'];
+
 }
 
 // Here is the test for sumAndMultiply(); uncomment it to run it
-testSumAndMultiply(4,7,5);
+// testSumAndMultiply(4,7,5);
 
 
 /////////////////////////////////////
@@ -128,11 +128,11 @@ new branch for your work on the next question!
 var testArray = [2,3,4]; //eslint-disable-line
 
 function sumArray(testArray){ //eslint-disable-line
-  return [9, '2,3,4 was passed in as an array of numbers, and 9 is their sum.'];
+
 }
 
 // Here is the test for sumArray(); uncomment it to run it
-testSumArray(testArray);
+// testSumArray(testArray);
 
 
 /////////////////////////////////////
@@ -161,8 +161,8 @@ new branch for your work on the next question!
 
 // Write your code here
 function multiplyArray(testArray){ //eslint-disable-line
-  return [24, 'The numbers 2,3,4 have a product of 24.'];
+
 }
 
 // Here is the test for multiplyArray(); uncomment it to run it
-testMultiplyArray([2,3,4]);
+// testMultiplyArray([2,3,4]);
